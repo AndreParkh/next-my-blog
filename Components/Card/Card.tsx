@@ -28,5 +28,5 @@ export const Card = ({ title, text }: CardProps): JSX.Element => {
 				</a>
 			</div>
 		</div>
-	)
-}
+	);
+};
