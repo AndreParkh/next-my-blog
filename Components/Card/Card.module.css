@@ -1,0 +1,95 @@
+.card {
+	display: grid;
+	grid-template-areas:
+		"image"
+		"content"
+		"reference";
+	gap: 16px;
+
+	max-width: 350px;
+	padding: 10px;
+
+	border: 1px solid hsl(0deg 6% 91%);
+	border-radius: 5px;
+}
+
+.imgWrapper {
+	display: flex;
+	grid-area: image;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+	height: 200px;
+	margin: auto;
+
+	background: hsl(205deg 100% 95%);
+	border-radius: 5px;
+}
+
+.content {
+	display: grid;
+	grid-area: content;
+	grid-template-areas:
+		"theme separator lastChanged likes"
+		"title title title title "
+		"text text text text";
+	grid-template-columns: auto 1px auto 1fr;
+	gap: 5px;
+}
+
+.theme {
+	grid-area: theme;
+	font-size: var(--fs-card-small);
+}
+
+.separator {
+	grid-area: separator;
+	color: var(--secondary-color);
+	font-size: var(--fs-card-small);
+}
+
+
+.lastChanged {
+	grid-area: lastChanged;
+	font-size: var(--fs-card-small);
+	color: var(--secondary-color);
+}
+
+.title {
+	grid-area: title;
+	font-size: var(--fs-card-big);
+}
+
+.text {
+	grid-area: text;
+	font-size: var(--fs-card-normal);
+	color: var(--secondary-color);
+}
+
+
+.reference {
+	display: flex;
+	grid-area: reference;
+	justify-content: space-between;
+	font-size: var(--fs-card-small);
+}
+
+.duration {
+	display: flex;
+	align-items: center;
+
+	font-size: inherit;
+	color: var(--secondary-color);
+	text-decoration: none;
+}
+
+.moreInfo {
+	display: flex;
+	align-items: center;
+
+	font-size: var(--fs-card-small);
+	color: var(--ref-color);
+	text-decoration: none;
+
+}
