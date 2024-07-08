@@ -1,0 +1,36 @@
+.likeWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 48px;
+	height: 48px;
+	border: 1px solid hsl(0deg, 0%, 19%);
+	border-radius: 50%;
+	transition: all ease 0.2s;
+	cursor: pointer;
+}
+
+.likeWrapper:hover {
+	background-color: hsl(0deg, 0%, 70%);
+	border: 1px solid hsl(0deg, 0%, 70%);
+}
+
+.likeWrapper svg {
+	transform: scale(1.13);
+	stroke: hsl(0deg, 0%, 19%);
+	transition: all ease 0.2s;
+}
+
+
+
+.filled {
+	background-color: hsl(0deg, 0%, 19%);
+}
+
+.filled:hover {
+	background-color: hsl(0deg, 0%, 40%);
+}
+
+.filled svg {
+	stroke: hsl(0deg, 0%, 100%);
+}
