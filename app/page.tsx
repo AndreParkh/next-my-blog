@@ -20,7 +20,10 @@ export default function Home() {
 
 	return (
 		<main className={styles.main}>
-			<Card title={tempData.title} text={tempData.text} />
+			<Card className={styles.gridItem} title={tempData.title} text={tempData.text} />
+			<Card className={styles.gridItem} title={tempData.title} text={tempData.text} />
+			<Card className={styles.gridItem} title={tempData.title} text={tempData.text} />
+			<Card className={styles.gridItem} title={tempData.title} text={tempData.text} />
 			<Like setState={(state: boolean) => setIsLiked(state)} />
 		</main>
 	)
