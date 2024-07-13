@@ -1,0 +1,12 @@
+.likes {
+	display: flex;
+	grid-area: likes;
+	align-items: center;
+	place-self: center right;
+	gap: 2px;
+
+	font-size: var(--fs-card-small);
+	color: var(--secondary-color);
+	text-align: center;
+	text-decoration: none;
+}
