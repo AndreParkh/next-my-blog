@@ -59,12 +59,16 @@
 .title {
 	grid-area: title;
 	font-size: var(--fs-card-big);
+	max-height: 25px;
+	overflow: hidden;
 }
 
 .text {
 	grid-area: text;
 	font-size: var(--fs-card-normal);
 	color: var(--secondary-color);
+	max-height: 80px;
+	overflow: hidden;
 }
 
 
