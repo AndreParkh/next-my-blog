@@ -1,5 +1,5 @@
 'use client'
-import { Like } from '../Like/Like'
+import { Like } from '../index'
 import styles from './LikeWithText.module.css'
 import { LikeWithTextProps } from './LikeWithText.props'
 import { useEffect, useState } from 'react'

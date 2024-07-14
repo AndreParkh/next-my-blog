@@ -21,6 +21,7 @@ export default async function Home() {
 	// }
 
 	const posts = await getPosts()
+	console.log(posts)
 
 	return (
 		<main className={styles.main}>

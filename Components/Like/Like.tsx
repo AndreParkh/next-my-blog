@@ -1,9 +1,10 @@
 'use client'
 import styles from './Like.module.css'
 import LikeSvg from '@/public/like.svg'
-import cn from 'classnames'
-import { LikeProps } from './Like.props'
 import { useState } from 'react'
+import { LikeProps } from './Like.props'
+
+import cn from 'classnames'
 
 export const Like = ({ setState, ...props }: LikeProps): JSX.Element => {
 
