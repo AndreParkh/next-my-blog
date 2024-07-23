@@ -1,7 +1,7 @@
 
 import { Card } from '@/Components'
 import styles from "./page.module.css"
-import { getPosts } from '@/helpers/posts'
+import { getPosts } from '@/helpers/getPosts'
 
 
 export default async function Home() {
