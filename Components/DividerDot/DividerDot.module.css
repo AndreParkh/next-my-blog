@@ -1,0 +1,5 @@
+.dividerDot {
+	/* display: inline-block; */
+	color: var(--secondary-color);
+	font-size: var(--fs-card-small);
+}

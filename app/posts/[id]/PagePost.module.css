@@ -1,0 +1,21 @@
+.title {
+	font-size: 34px;
+	margin-bottom: 12px;
+}
+
+.content {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 32px;
+	color: var(--secondary-color);
+}
+
+.info {
+	display: flex;
+	gap: 10px;
+	font-size: 12px;
+}
+
+.LikeButton {
+	margin-top: 20px;
+}

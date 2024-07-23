@@ -1,0 +1,8 @@
+.grey {
+	color: var(--secondary-color);
+}
+
+
+.darkGrey {
+	color: hsl(0, 0%, 29%);
+}
