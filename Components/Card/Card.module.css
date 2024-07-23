@@ -36,6 +36,7 @@
 		"text text text text";
 	grid-template-columns: auto 1px auto 1fr;
 	gap: 5px;
+
 }
 
 .theme {
@@ -59,12 +60,17 @@
 .title {
 	grid-area: title;
 	font-size: var(--fs-card-big);
+	max-height: 25px;
+	overflow: hidden;
 }
 
 .text {
 	grid-area: text;
 	font-size: var(--fs-card-normal);
 	color: var(--secondary-color);
+	max-height: 80px;
+	overflow: hidden;
+
 }
 
 
@@ -91,5 +97,12 @@
 	font-size: var(--fs-card-small);
 	color: var(--ref-color);
 	text-decoration: none;
+}
 
+.moreInfo svg {
+	transition: transform ease 0.2s;
+}
+
+.moreInfo:hover svg {
+	transform: translate(5px, 0);
 }

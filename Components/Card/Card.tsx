@@ -5,8 +5,11 @@ import Image from 'next/image';
 import Arrow from './arrow.svg';
 import { LikeCounter } from '../LikeCounter/LikeCounter';
 import cn from 'classnames'
+import Link from 'next/link';
 
-export const Card = ({ title, text, className, ...props }: CardProps): JSX.Element => {
+export const Card = ({ post, className, ...props }: CardProps): JSX.Element => {
+
+	const { id, title, body } = post
 
 	return (
 		<div className={cn(styles.card, className)} {...props}>
@@ -19,14 +22,14 @@ export const Card = ({ title, text, className, ...props }: CardProps): JSX.Eleme
 				<div className={styles.separator}>&#xb7;</div>
 				<LikeCounter qtyLike={5} />
 				<h2 className={styles.title}>{title}</h2>
-				<p className={styles.text}>{text}</p>
+				<p className={styles.text}>{body}</p>
 			</div>
 			<div className={styles.reference}>
 				<p className={styles.duration}>3 минуты</p>
-				<a href="#" className={styles.moreInfo}>
+				<Link href={`/posts/${id}`} className={styles.moreInfo}>
 					Читать
 					<Arrow />
-				</a>
+				</Link >
 			</div>
 		</div>
 	);

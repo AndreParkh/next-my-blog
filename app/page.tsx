@@ -1,30 +1,17 @@
-'use client'
-import { Card } from '@/Components/Card/Card'
+
+import { Card, LikeWithText } from '@/Components'
 import styles from "./page.module.css"
-import { CardProps } from '@/Components/Card/Card.props'
-import { Like } from '@/Components/Like/Like'
-import { useEffect, useState } from 'react'
+import { getPosts } from '@/api/posts'
 
 
-export default function Home() {
-	const tempData: CardProps = {
-		title: 'Как работать с CSS Grid',
-		text: 'Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..'
-	}
+export default async function Home() {
 
-	const [isLiked, setIsLiked] = useState(false)
-
-	useEffect(() => {
-		fetch('https://jsonplaceholder.typicode.com/posts/:id', { method: "PATCH" })
-	}, [isLiked])
+	const posts = await getPosts()
 
 	return (
 		<main className={styles.main}>
-			<Card className={styles.gridItem} title={tempData.title} text={tempData.text} />
-			<Card className={styles.gridItem} title={tempData.title} text={tempData.text} />
-			<Card className={styles.gridItem} title={tempData.title} text={tempData.text} />
-			<Card className={styles.gridItem} title={tempData.title} text={tempData.text} />
-			<Like setState={(state: boolean) => setIsLiked(state)} />
+			{posts && posts.map(post => <Card className={styles.gridItem} post={post} />)}
+			<LikeWithText text={''} />
 		</main>
 	)
 }
