@@ -1,4 +1,4 @@
-.likes {
+.likeCounter {
 	display: flex;
 	grid-area: likes;
 	align-items: center;
