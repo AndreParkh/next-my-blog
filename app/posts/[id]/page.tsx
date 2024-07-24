@@ -3,10 +3,16 @@ import { getPosts } from '@/helpers/getPosts'
 import { notFound } from 'next/navigation'
 import imageCard from '@/public/Safari.png';
 import styles from './PagePost.module.css'
-import { DividerDot, ImageComp, LikeCounter, LikeWithText } from '@/Components';
-import { Info } from '@/Components/Info/Info';
 import { getComments } from '@/helpers/getComments';
-import { Comment } from '@/Components/Comment/Comment';
+import {
+	DividerDot,
+	ImageComp,
+	LikeCounter,
+	LikeWithText,
+	Info,
+	Comment,
+} from '@/Components';
+import { CommentForm } from '@/Components/CommentForm/CommentForm';
 
 
 export async function generateStaticParams() {
@@ -57,6 +63,9 @@ export default async function PagePost({ params }: { params: { id: number } }) {
 				{comments.map(comment => <Comment comment={comment} />)}
 			</section>
 			}
+			<section className='commentForm'>
+				<CommentForm postId={params.id} />
+			</section>
 		</div>
 	)
 }

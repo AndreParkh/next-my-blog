@@ -8,6 +8,7 @@
 	--secondary-color: hsl(0deg 0% 43%);
 	--dark-grey: hsl(0, 0%, 29%);
 	--ref-color: hsl(213deg 84% 49%);
+	--font-famaly: 'Open Sans', sans-serif;
 }
 
 * {
