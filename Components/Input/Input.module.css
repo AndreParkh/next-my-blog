@@ -1,0 +1,27 @@
+.inputWrapper {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.input {
+	padding: 20px 30px;
+	border: 1px solid hsla(0, 0%, 16%, 0.16);
+	border-radius: 8px;
+	width: 50%;
+}
+
+.input::placeholder {
+	font-size: 15px;
+	color: hsla(220, 23%, 40%, 0.5);
+}
+
+.error {
+	border: 1px solid red;
+}
+
+.errorMessage {
+	position: absolute;
+	color: red;
+	font-size: 12px;
+	padding-left: 20px;
+}

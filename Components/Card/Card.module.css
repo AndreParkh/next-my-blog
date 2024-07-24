@@ -13,6 +13,7 @@
 	border-radius: 5px;
 }
 
+
 .imgWrapper {
 	display: flex;
 	grid-area: image;
@@ -20,12 +21,11 @@
 	justify-content: center;
 
 	width: 100%;
-	height: 200px;
 	margin: auto;
-
 	background: hsl(205deg 100% 95%);
 	border-radius: 5px;
 }
+
 
 .content {
 	display: grid;
@@ -46,8 +46,6 @@
 
 .separator {
 	grid-area: separator;
-	color: var(--secondary-color);
-	font-size: var(--fs-card-small);
 }
 
 

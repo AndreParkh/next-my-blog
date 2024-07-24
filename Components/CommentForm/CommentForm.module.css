@@ -1,0 +1,30 @@
+.button {
+	padding: 14px 70px;
+	background-color: hsl(0, 0%, 19%);
+	border-radius: 8px;
+	font-weight: 700;
+	color: hsl(0, 0%, 100%);
+	margin-bottom: 100px;
+	cursor: pointer;
+	transition: all ease .2s;
+}
+
+.button:hover {
+	background-color: hsla(0, 0%, 19%, 0.8);
+}
+
+
+
+.message {
+	display: inline-flex;
+	margin-left: 30px;
+	height: 0;
+	overflow: hidden;
+	transition: all 0.5s ease;
+}
+
+.successMessage {
+	color: green;
+	height: auto;
+
+}
