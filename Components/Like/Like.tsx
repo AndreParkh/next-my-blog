@@ -16,12 +16,13 @@ export const Like = ({ setState, ...props }: LikeProps): JSX.Element => {
 	}
 
 	return (
-		<div
+		<button
 			className={cn(styles.likeWrapper, { [styles.filled]: isLiked })}
 			onClick={() => onClickHandler()}
+			aria-label='Поставить лайк'
 			{...props}
 		>
 			<LikeSvg />
-		</div>
+		</button>
 	)
 }

@@ -13,6 +13,7 @@ import {
 	Comment,
 } from '@/Components';
 import { CommentForm } from '@/Components/CommentForm/CommentForm';
+import { duration, publish, theme } from '@/Components/Info/Info.props';
 
 
 export async function generateStaticParams() {
@@ -41,11 +42,11 @@ export default async function PagePost({ params }: { params: { id: number } }) {
 
 			<h2 className={styles.title}>{page.title}</h2>
 			<div className={styles.info}>
-				<Info color='dark-grey'>Front-end</Info>
+				<Info color='dark-grey' type={theme}>Front-end</Info>
 				<DividerDot />
-				<Info>1 месяц назад</Info>
+				<Info type={publish}>1 месяц назад</Info>
 				<DividerDot />
-				<Info>3 минуты</Info>
+				<Info type={duration}>3 минуты</Info>
 				<DividerDot />
 				<LikeCounter qtyLike={5} />
 			</div>
@@ -53,7 +54,9 @@ export default async function PagePost({ params }: { params: { id: number } }) {
 				src={imageCard}
 				width={687}
 				height={440}
-				color={'white'} />
+				color={'white'}
+				aria-hidden={true}
+			/>
 			<div className={styles.content}>
 				{page.body ?? <div dangerouslySetInnerHTML={{ __html: page.body }} />}
 				<LikeWithText className={styles.LikeButton} text='Понравилось? Жми' />

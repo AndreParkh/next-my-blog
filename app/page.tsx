@@ -10,7 +10,13 @@ export default async function Home() {
 
 	return (
 		<main className={styles.main}>
-			{posts && posts.map(post => <Card className={styles.gridItem} post={post} />)}
+			<ul className={styles.ul}>
+				{posts && posts.map(post =>
+					<li className={styles.gridItem}>
+						<Card post={post} />
+					</li>
+				)}
+			</ul>
 		</main>
 	)
 }
