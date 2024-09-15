@@ -1,0 +1,19 @@
+.imgWrapper {
+	display: flex;
+	grid-area: image;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+	margin: auto;
+	background: hsl(205deg 100% 95%);
+	border-radius: 5px;
+}
+
+.blue {
+	background: hsl(205deg 100% 95%);
+}
+
+.white {
+	background: white;
+}

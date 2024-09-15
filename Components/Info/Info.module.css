@@ -1,0 +1,12 @@
+.Info {
+	font-size: 12px;
+}
+
+.grey {
+	color: var(--secondary-color);
+}
+
+
+.darkGrey {
+	color: var(--dark-grey);
+}

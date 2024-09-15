@@ -5,7 +5,7 @@ import { LikeWithTextProps } from './LikeWithText.props'
 import { useEffect, useState } from 'react'
 import cn from 'classnames'
 
-export const LikeWithText = ({ text, className, ...props }: LikeWithTextProps): JSX.Element => {
+export const LikeWithText = ({ text = '', className, ...props }: LikeWithTextProps): JSX.Element => {
 
 	const [isLiked, setIsLiked] = useState(false)
 
