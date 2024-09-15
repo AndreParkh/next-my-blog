@@ -1,7 +1,6 @@
 import styles from './Card.module.css';
 import { CardProps } from './Card.props';
 import imageCard from '@/public/Safari.png';
-// import Image from 'next/image';
 import Arrow from './arrow.svg';
 import cn from 'classnames'
 import Link from 'next/link';

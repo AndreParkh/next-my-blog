@@ -6,7 +6,8 @@ import { getPosts } from '@/helpers/getPosts'
 
 export default async function Home() {
 
-	const posts = await getPosts(18)
+	const qtyPost = 18
+	const posts = await getPosts(qtyPost)
 
 	return (
 		<main className={styles.main}>
