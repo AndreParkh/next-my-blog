@@ -5,7 +5,7 @@ import { DividerDotProps } from './DividerDot.props';
 export const DividerDot = ({ className, ...props }: DividerDotProps): JSX.Element => {
 
 	return (
-		<div className={cn(styles.dividerDot, className)} {...props}>
+		<div className={cn(styles.dividerDot, className)} aria-hidden={true} {...props}>
 			&#xb7;
 		</div>
 	);

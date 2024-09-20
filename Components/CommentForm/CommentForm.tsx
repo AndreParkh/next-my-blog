@@ -10,7 +10,7 @@ import { useState } from 'react';
 
 export const CommentForm = ({ postId, className, ...props }: CommentFormProps): JSX.Element => {
 
-	const { register, handleSubmit, formState: { errors }, reset } = useForm<ICommentForm>()
+	const { register, handleSubmit, formState: { errors }, reset, clearErrors } = useForm<ICommentForm>()
 	const [isSuccess, setIsSuccess] = useState(false)
 	const [error, setError] = useState('')
 
@@ -42,14 +42,17 @@ export const CommentForm = ({ postId, className, ...props }: CommentFormProps): 
 					{...register('name', { required: { value: true, message: 'Введите имя' } })}
 					placeholder={'Имя'}
 					error={errors.name}
+					aria-invalid={!!errors.name}
 				/>
 				<Textarea
 					{...register('comment', { required: { value: true, message: 'Введите комментарий' } })}
 					placeholder={'Комментарий'}
 					error={errors.comment}
+					aria-label='Комментарий'
+					aria-invalid={!!errors.comment}
 				/>
-				<button className={styles.button}>Отправить</button>
-				<div className={cn(styles.message, { [styles.successMessage]: isSuccess })}>Комментарий успешно отправлен</div >
+				<button className={styles.button} onClick={() => clearErrors()} >Отправить</button>
+				{isSuccess && <div className={cn(styles.message, { [styles.successMessage]: isSuccess })} role='alert'>Комментарий успешно отправлен</div >}
 			</div>
 		</form>
 	);

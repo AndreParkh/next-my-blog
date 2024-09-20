@@ -6,11 +6,18 @@ import { getPosts } from '@/helpers/getPosts'
 
 export default async function Home() {
 
-	const posts = await getPosts(18)
+	const qtyPost = 18
+	const posts = await getPosts(qtyPost)
 
 	return (
 		<main className={styles.main}>
-			{posts && posts.map(post => <Card className={styles.gridItem} post={post} />)}
+			<ul className={styles.ul}>
+				{posts && posts.map(post =>
+					<li className={styles.gridItem}>
+						<Card post={post} />
+					</li>
+				)}
+			</ul>
 		</main>
 	)
 }

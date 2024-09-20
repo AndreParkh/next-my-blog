@@ -17,7 +17,12 @@ export const GitHubItem = ({ ...props }: GitHubItemProps): JSX.Element => {
 
 	return (
 		<gitHubContext.Provider value={{ link: '' }}>
-			<a href={link} target="_blank" className={styles.github} {...props}>
+			<a
+				href={link}
+				target='_blank'
+				className={styles.github} {...props}
+				aria-label='Ссылка на GitHub'
+			>
 				<GithubSvg />
 			</a>
 		</gitHubContext.Provider>
